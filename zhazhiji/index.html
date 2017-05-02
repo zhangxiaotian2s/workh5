@@ -1,0 +1,170 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title></title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <style>
+        .banner {
+            height: auto
+        }
+
+        .swiper-container {
+            width: 100%;
+            padding-top: 0.2rem;
+            min-height: 1rem;
+            height: 6.6rem;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #ffe111;
+        }
+
+        .banner-text {
+            bottom: 0px;
+            height: 0.8rem;
+            line-height: 0.8rem;
+            width: 100%;
+            color: #fff;
+            font-size: 0.3rem;
+            opacity: 0.8;
+            text-align: center;
+            background: url('images/bk70.png')
+        }
+    </style>
+    <!-- endbuild -->
+    <script type="text/javascript">
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <img src="images/goods-zwt.jpg" data-original="images/head-01.jpg" class="img-responsive img" alt="">
+            <img src="images/goods-zwt.jpg" dt data-original="images/head-02.jpg" class="img-responsive img" alt="">
+        </div>
+        <div class="title">
+            <img src="images/title-zwt.jpg" data-original="images/title-01.jpg" class="img-responsive img" alt="">
+        </div>
+        <div class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide pr" style="background-image:url(images/banner-01.jpg)">
+                        <div class="pa banner-text">11111111</div>
+                    </div>
+                    <div class="swiper-slide pr" style="background-image:url(images/banner-01.jpg)">
+                        <div class="pa banner-text">11111111</div>
+                    </div>
+                    <div class="swiper-slide pr" style="background-image:url(images/banner-01.jpg)">
+                        <div class="pa banner-text">11111111</div>
+                    </div>
+                    <div class="swiper-slide pr" style="background-image:url(images/banner-01.jpg)">
+                        <div class="pa banner-text">11111111</div>
+                    </div>
+                    <div class="swiper-slide pr" style="background-image:url(images/banner-01.jpg)">
+                        <div class="pa banner-text">11111111</div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+        <div class="title">
+            <img src="images/title-zwt.jpg" data-original="images/title-02.jpg" class="img-responsive img" alt="">
+        </div>
+        <div class="section">
+            <a href="">
+                <img src="images/goods-zwt.jpg" data-original="images/goods-01.jpg" class="img-responsive img" alt="">
+            </a>
+            <a href="">
+                <img src="images/goods-zwt.jpg" data-original="images/goods-02.jpg" class="img-responsive img" alt="">
+            </a>
+            <a href="">
+                <img src="images/goods-zwt.jpg" data-original="images/goods-03.jpg" class="img-responsive img" alt="">
+            </a>
+        </div>
+        <div class="title">
+            <img src="images/title-zwt.jpg" data-original="images/title-03.jpg" class="img-responsive img" alt="">
+        </div>
+        <div class="section">
+            <a href="">
+                <img src="images/goods-zwt.jpg" data-original="images/goods-04.jpg" class="img-responsive img" alt="">
+            </a>
+
+        </div>
+        <div class="title">
+            <img src="images/title-zwt.jpg" data-original="images/title-04.jpg" class="img-responsive img" alt="">
+        </div>
+        <div class="section">
+            <a href="">
+                <img src="images/goods-zwt.jpg" data-original="images/goods-05.jpg" class="img-responsive img" alt="">
+            </a>
+            <a href="">
+                <img src="images/goods-zwt.jpg" data-original="images/goods-06.jpg" class="img-responsive img" alt="">
+            </a>
+            <a href="">
+                <img src="images/goods-zwt.jpg" data-original="images/goods-07.jpg" class="img-responsive img" alt="">
+            </a>
+            <a href="">
+                <img src="images/goods-zwt.jpg" data-original="images/goods-08.jpg" class="img-responsive img" alt="">
+            </a>
+            <a href="">
+                <img src="images/goods-zwt.jpg" data-original="images/goods-09.jpg" class="img-responsive img" alt="">
+            </a>
+            <a href="">
+                <img src="images/goods-zwt.jpg" data-original="images/goods-10.jpg" class="img-responsive img" alt="">
+            </a>
+        </div>
+        <div class="footer">
+            <a href="">
+                <img src="images/goods-zwt.jpg" data-original="images/footer.jpg" class="img-responsive img" alt="">
+            </a>
+        </div>
+
+    </div>
+    <script src="js/imgLazyLoad.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        var lazyLoad = new imgLazyLoad(),
+            arr = document.querySelectorAll('.img');
+
+        lazyLoad.dynamic(arr);
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: true,
+            autoplay: 3000,
+            coverflow: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true
+            }
+        });
+    </script>
+</body>
+
+</html>
