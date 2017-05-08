@@ -83,14 +83,22 @@
                 <div class="swiper-slide pr" style="background:url(http://op44q48dy.bkt.clouddn.com/10.jpg) no-repeat center; background-size: cover">
                     <!--Slide 10-->
                     <img src="http://op44q48dy.bkt.clouddn.com/img10-title-01.png" class="pa" style="top:0.6rem;left:0.4rem; width:6.7rem" alt="">
-                    <img src="http://op44q48dy.bkt.clouddn.com/img10-ticket-01.png" class="pa ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s"
-                        swiper-animate-delay="0.3s" style="top:2.5rem;left:1rem; width:5.5rem" alt="">
-                    <img src="http://op44q48dy.bkt.clouddn.com/img10-ticket-02.png" class="pa ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s"
-                        swiper-animate-delay="0.8s" style="top:4.7rem;left:1rem; width:5.5rem" alt="">
-                    <img src="http://op44q48dy.bkt.clouddn.com/img10-ticket-03.png" class="pa ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s"
-                        swiper-animate-delay="1.3s" style="top:6.9rem;left:1rem; width:5.5rem" alt="">
-                    <img src="http://op44q48dy.bkt.clouddn.com/img10-btn.png" class="pa ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s"
-                        swiper-animate-delay="2s" style="top:9.5rem;left:1rem; width:5.5rem" alt="">
+                    <a href="">
+                        <img src="http://op44q48dy.bkt.clouddn.com/img10-ticket-01.png" class="pa ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s"
+                            swiper-animate-delay="0.3s" style="top:2.5rem;left:1rem; width:5.5rem" alt="">
+                    </a>
+                    <a href="">
+                        <img src="http://op44q48dy.bkt.clouddn.com/img10-ticket-02.png" class="pa ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s"
+                            swiper-animate-delay="0.8s" style="top:4.7rem;left:1rem; width:5.5rem" alt="">
+                    </a>
+                    <a href="">
+                        <img src="http://op44q48dy.bkt.clouddn.com/img10-ticket-03.png" class="pa ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s"
+                            swiper-animate-delay="1.3s" style="top:6.9rem;left:1rem; width:5.5rem" alt="">
+                    </a>
+                    <a href="">
+                        <img src="http://op44q48dy.bkt.clouddn.com/img10-btn.png" class="pa ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s"
+                            swiper-animate-delay="2s" style="top:9.5rem;left:1rem; width:5.5rem" alt="">
+                    </a>
                 </div>
 
 
@@ -136,8 +144,8 @@
             onSlideNextStart: function (swiper) {
                 console.log(swiper)
                 if (swiper.activeIndex === 1) {
-                    alert(!music_player._isplay() && music_player._isplaynumber() === 0)
-                    if (!music_player._isplay() && music_player._isplaynumber() === 0) {
+                    if (!music_player._isplay()) {
+
                         function audioAutoPlay() {
                             music_player._play();
                             document.addEventListener("WeixinJSBridgeReady", function () {
@@ -145,7 +153,6 @@
                             }, false);
                         }
                         audioAutoPlay()
-
                     }
                 }
                 if (swiper.activeIndex === 9) {
