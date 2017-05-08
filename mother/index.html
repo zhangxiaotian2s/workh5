@@ -125,6 +125,9 @@
                     document.querySelector("#loading").setAttribute('style', 'display:none')
                     swiperAnimate(swiper); //初始化完成开始动画
                     music_player = new Player($('#btn_play_music'), "images/song.mp3");
+                    document.addEventListener("touchstart", function () {
+                        music_player._isplay()
+                    }, false);
                 }, 0)
             },
             onSlideChangeEnd: function (swiper) {
@@ -143,18 +146,7 @@
             },
             onSlideNextStart: function (swiper) {
                 console.log(swiper)
-                if (swiper.activeIndex === 1) {
-                    if (!music_player._isplay()) {
 
-                        function audioAutoPlay() {
-                            music_player._play();
-                            document.addEventListener("WeixinJSBridgeReady", function () {
-                                music_player._play();
-                            }, false);
-                        }
-                        audioAutoPlay()
-                    }
-                }
                 if (swiper.activeIndex === 9) {
                     document.querySelector("#next").setAttribute('style', 'display:none')
                 }
