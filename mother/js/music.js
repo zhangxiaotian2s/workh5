@@ -1,6 +1,6 @@
 function Player(el, src) {
     this.el = el;
-    this.isPlay = true;
+    this.isPlay = false;
     this.playnumber = 0;
     if (src == undefined) {
         src = '';
@@ -13,20 +13,27 @@ Player.prototype = {
             attr = {
                 loop: true,
                 preload: "auto",
-                autoplay: true,
-                src: src,
+                src: src
             };
         this._audio = new Audio;
         for (var i in attr) {
             attr.hasOwnProperty(i) && i in this._audio && (this._audio[i] = attr[i]);
         }
-        this.inited = false;
-        $(this._audio).on('durationchange', function () {
-            // 播放加载
-            if (_this._audio.duration > 1) {
-                _this.inited = true;
+        document.addEventListener('DOMContentLoaded', function () {
+            function audioAutoPlay() {
+                _this._play();
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    _this._play();
+                }, false);
             }
+            audioAutoPlay()
         });
+
+        // this._audio.addEventListener('canplay', function () {
+        //     _this._isplay();
+        //     _this._play();
+        // }, false)
+
         $(this._audio).on('ended', function () {
             // 播放结束
             _this._audio.currentTime = 0;
@@ -36,11 +43,19 @@ Player.prototype = {
         if (src != '') {
             this._audio.load();
         }
-        if (typeof this.el !== 'string') {
-            this.el.on('click', function () {
-                _this._play();
-            });
-        }
+        document.querySelector('#btn_play_music').addEventListener('click', function () {
+            _this._play();
+        }, false)
+        // this.el.on('touchstart', function () {
+        //     if (canClick === true) {
+        //         canClick = false
+        //         _this._play();
+
+        //     }
+        //     setTimeout(function () {
+        //         canClick = true
+        //     }, 500)
+        // });
     },
     _load: function () {
         this._audio.load();
@@ -52,40 +67,32 @@ Player.prototype = {
         return this.playnumber;
     },
     _isplay: function () {
+        if (this._audio.paused) {
+            this.isPlay = false
+        } else {
+            this.isPlay = true
+
+        }
         return this.isPlay;
     },
     _play: function () {
         if (!this.isPlay) {
-            this.playnumber++;
+
             this._audio.play();
-            if (typeof this.el !== 'string') {
-                this.el.removeClass('c_btn_play_music_paused');
-                this.el.addClass('c_btn_play_music_playing');
-            }
+            this._isplay()
         } else {
             this._audio.pause();
-            if (typeof this.el !== 'string') {
-                this.el.removeClass('c_btn_play_music_playing');
-                this.el.addClass('c_btn_play_music_paused');
-            }
+            this._isplay()
         }
-        this.isPlay = !this.isPlay;
-    },
-    _playOn: function () {
-        this._audio.play();
-        if (typeof this.el !== 'string') {
+        if (!this.isPlay) {
+            this.el.removeClass('c_btn_play_music_playing');
+            this.el.addClass('c_btn_play_music_paused');
+        } else {
+            this.playnumber++;
             this.el.removeClass('c_btn_play_music_paused');
             this.el.addClass('c_btn_play_music_playing');
         }
-        this.isPlay = true;
-    },
-    _playOff: function () {
-        this._audio.pause();
-        if (typeof this.el !== 'string') {
-            this.el.removeClass('c_btn_play_music_playing');
-            this.el.addClass('c_btn_play_music_paused');
-        }
-        this.isPlay = false;
+
     },
     _volume: function (num) {
         this._audio.volume = num;
