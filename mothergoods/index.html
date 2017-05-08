@@ -1,0 +1,113 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title></title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- endbuild -->
+    <script type="text/javascript">
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="head pr">
+            <a href="#">
+                <img src="images/img10-ticket-01.png" class='pa' alt="">
+            </a>
+        </div>
+        <div class="content">
+            <div class="ticket">
+                <img src="images/img10-ticket-02.png" class="img-responsive" alt="">
+                <img src="images/img10-ticket-03.png" class="img-responsive" alt="">
+            </div>
+            <div class="title">
+                <img src="images/title-img.png" class="img-responsive" alt="">
+            </div>
+
+            <div class="goods-list clearfix">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="images/goods-zwt.png" data-original="images/goods-01.jpg" class="img-responsive img" alt="">
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/goods-zwt.png" data-original="images/goods-02.jpg" class="img-responsive img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/goods-zwt.png" data-original="images/goods-03.jpg" class="img-responsive img" alt="">
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/goods-zwt.png" data-original="images/goods-04.jpg" class="img-responsive img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/goods-zwt.png" data-original="images/goods-05.jpg" class="img-responsive img" alt="">
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/goods-zwt.png" data-original="images/goods-06.jpg" class="img-responsive img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/goods-zwt.png" data-original="images/goods-07.jpg" class="img-responsive img" alt="">
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/goods-zwt.png" data-original="images/goods-08.jpg" class="img-responsive img" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/goods-zwt.png" data-original="images/goods-09.jpg" class="img-responsive img" alt="">
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/goods-zwt.png" data-original="images/goods-10.jpg" class="img-responsive img" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <a href="">
+                    <img src="images/footer.jpg" class="img-responsive" alt="">
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/imgLazyLoad.js"></script>
+    <script>
+        var lazyLoad = new imgLazyLoad(),
+            arr = document.querySelectorAll('.img');
+        lazyLoad.dynamic(arr);
+    </script>
+
+</body>
+
+</html>
