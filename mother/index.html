@@ -117,7 +117,7 @@
                     document.querySelector("#loading").setAttribute('style', 'display:none')
                     swiperAnimate(swiper); //初始化完成开始动画
                     music_player = new Player($('#btn_play_music'), "images/song.mp3");
-                }, 0)
+                }, 2000)
             },
             onSlideChangeEnd: function (swiper) {
                 swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
