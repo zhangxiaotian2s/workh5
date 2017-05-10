@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit" />
+<title>用户注册</title>
+<link href="css/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="top_box">
+        <div class="index_box">
+            <h1><a href="index.html">智慧商图</a></h1>
+        </div>
+    </div>
+    <div class="nav_box register_nn">
+        <div class="index_box">已有账户号？ <a href="login.html">请登录</a></div>
+    </div>
+    <div class="index_box register_box">
+        <div class="register_1 left">
+            <form id="signupForm" method="post" action="">
+                <ul>
+                    <li>
+                        <p class="nr_con"><span class="wz">用户名</span><input type="text" class="input_1" id="username" maxlength="30" name="username" placeholder="您的账户名和用户名"></p>
+                    </li>
+                    <li>
+                        <p class="nr_con"><span class="wz">设置密码</span><input type="password" class="input_1" id="password" maxlength="32" name="password" placeholder="建议至少使用两种字符组合" onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false"></p>
+                    </li>
+                    <li>
+                        <p class="nr_con"><span class="wz">确认密码</span><input type="password" class="input_1" id="confirm_password" maxlength="32" name="confirm_password" placeholder="请再次输入密码" onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false"></p>
+                    </li>
+                    <li>
+                        <p class="nr_con"><span class="wz">手机号码</span><input type="text" class="input_1" maxlength="11" id="phone" name="phone" placeholder="建议常用手机号"></p>
+                    </li>
+                    <li>
+                        <p class="nr_con pr"><span class="wz">手机验证码</span><input type="text" class="input_1 checkCode" maxlength="6" id="phoneYzm" name="phoneYzm" placeholder="请输入手机验证码"><input type="button" class="get_code" id="btn" value="获取验证码" onclick="getCodeFn(this)" /></p>
+                    </li>
+                    <li class="fwxy_li"><label class="label_password"><input type="checkbox" class="input_check" id="agree" name="agree" checked="checked">我已阅读并同意<a href="javascript:showMsgBox('wrapperPopId');" class="btn_1">《智慧商图用户注册协议》</a></label></li>
+                    <li class="cz_1"><button class="submit_btn" id="registerBtnId">立即注册</button></li>
+                </ul>
+            </form>
+        </div>
+        <div class="tx_upload right">
+            <div class="con">
+                <p class="tx">
+                    <span class="wz_1">点击上传头像</span>
+                    <input type="file" class="file_input">
+                    <img src="images/tx_none.jpg" alt="">
+                </p>
+                <p class="cz"><a href="" class="">提交</a></p>
+                <p class="wz">注册不了？<br />欢迎联系客服电话0471—6666666</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="footer_box">
+        <div class="index_box">
+            <div class="ff_1">
+                <dl>
+                    <dt>关于我们</dt>
+                    <dd><a href="">联系我们</a></dd>
+                    <dd><a href="">服务条款</a></dd>
+                    <dd><a href="">合作伙伴</a></dd>
+                    <dd><a href="">在线服务</a></dd>
+                </dl>
+                <dl>
+                    <dt>关于我们</dt>
+                    <dd><a href="">联系我们</a></dd>
+                    <dd><a href="">服务条款</a></dd>
+                    <dd><a href="">合作伙伴</a></dd>
+                    <dd><a href="">在线服务</a></dd>
+                </dl>
+                <dl>
+                    <dt>关于我们</dt>
+                    <dd><a href="">联系我们</a></dd>
+                    <dd><a href="">服务条款</a></dd>
+                    <dd><a href="">合作伙伴</a></dd>
+                    <dd><a href="">在线服务</a></dd>
+                </dl>
+                <dl>
+                    <dt>其它</dt>
+                    <dd><a href="">网站地图</a></dd>
+                    <dd><a href="">友情链接</a></dd>
+                    <dd><a href="">广告导航</a></dd>
+                    <dd><a href="">天空网</a></dd>
+                </dl>
+                <div class="code">
+                    <p class="pt"><img src="images/code_pt.jpg" alt=""></p>
+                    <p class="wz">官 方 微 信</p>
+                </div>
+            </div>
+            <ul class="ff_2">
+                <li><span class="wz">电话：</span>020-52125548</li>
+                <li><span class="wz">公司地址：</span>北京谷 大兴区 天翼智谷  31号楼</li>
+                <li><span class="wz">QQ：</span>666666666</li>
+                <li><span class="wz">邮箱：</span>666666666@qq.com</li>
+                <li><span class="wz">微博：</span>xxxxxxx</li>
+            </ul>
+            <div class="ff_wz">版权声明：所有图片均受著作权保护，未经许可不得使用、转载、摘编。 版权所有 北京全景视觉网络科技股份有限公司 <br />京ICP备10011865号-1  京公网安备11010502022735号</div>
+        </div>
+    </div>
+
+    <!-- 用户条款弹出框 -->
+    <div class="wrapper_box dn" id="wrapperPopId">
+        <div class="clause_pop" id="clausePopId">
+            <div class="title tac">智慧商图用户注册协议<a href="javascript:closeWindow('wrapperPopId');" class="close_btn"></a></div>
+            <div class="content">
+                <div class="clause_con">
+                    <p class="wz">十二年历史，在农业领域有极高的行业影响力。拥有视频直播、平面媒体、行业金融服务等多元化行业服务体系。十二年历史，在农业领域有极高的行业影响力。拥有视频直播、平面媒体、行业金融服务等多元化行业服务体系。十二年历史，在农业领域有极高的行业影响力。拥有视频直播、平面媒体、行业金融服务等多元化行业服务体系。十二年历史，在农业领域有极高的行业影响力。拥有视频直播、平面媒体、行业金融服务等多元化行业服务体系。十二年历史，在农业领域有极高的行业影响力。拥有视频直播、平面媒体、行业金融服务等多元化行业服务体系。十二年历史，在农业领域有极高的行业影响力。拥有视频直播、平面媒体、行业金融服务等多元化行业服务体系。十二年历史，在农业领域有极高的行业影响力。拥有视频直播、平面媒体、行业金融服务等多元化行业服务体系。十二年历史</p>
+                </div>
+                <p class="tac"><a href="javascript:void(0);" class="btn agree_tk">同意并继续</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/validate-methods.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $(".agree_tk").click(function(){
+            closeWindow('wrapperPopId');
+            $(".label_check").addClass("on");
+            $("#agree").prop('checked', 'checked');
+            $("#agree").parent().next().hide();
+        });
+
+        $("#signupForm").validate({
+            onfocusout: function(element){
+                $(element).valid();
+            },
+            errorPlacement: function(error, element) { //错误信息位置设置方法
+                error.appendTo(element.parents("li")); //这里的element是录入数据的对象
+            },
+            submitHandler: function(form){   //表单提交句柄,为一回调函数，带一个参数：form   
+                // form.submit();   //提交表单
+                window.location.href="register_success.html";
+            }, 
+            ignore:"#phoneYq",
+            rules: {
+                phone: {
+                    required: true,
+                    minlength:11,
+                    isMobile : true
+                },
+                username: {
+                    required: true,
+                    minlength: 1
+                },
+                password: {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 32,
+                    isNewPwd: true
+                },
+                confirm_password: {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 32,
+                    isNewPwd: true,
+                    equalTo: "#password"
+                },
+                phoneYzm: {
+                    required: true,
+                    minlength: 6,
+                    number:true
+                },
+                agree: {
+                    required: true
+                }
+            },
+            messages: {
+                phone: {
+                    required: "请输入手机号码",
+                    minlength:"请确认手机不能小于11个字符",
+                    isMobile:"请正确填写您的手机号码"
+                },
+                username: {
+                    required: "请输入用户名",
+                    minlength: "请至少输入2个字符"
+                },
+                password: {
+                    required: "请输入密码",
+                    minlength: "使用字母、数字两种及以上组合,6-32个字符",
+                    maxlength: "使用字母、数字两种及以上组合,6-32个字符"
+                },
+                confirm_password: {
+                    required: "请再次输入密码",
+                    minlength: "使用字母、数字两种组合,6-32个字符",
+                    maxlength: "使用字母、数字两种组合,6-32个字符",
+                    equalTo: "两次密码输入不一致"
+                },
+                phoneYzm: {
+                    required: "请输入验证码",
+                    minlength: "请输入6位数验证码"
+                },
+                agree: {
+                    required:"请同意智慧商图用户注册协议"
+                }
+            }
+        })
+    })
+
+    function getCodeFn(obj){
+        var  _countdown = 60;
+        var _phone=$('input[name="phone"]');
+        
+        var _reg_phone=/^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/
+        if(!_reg_phone.test(_phone.val())){
+            // ajaxDialog(true,'请先输入一个电话号码');
+            _phone.blur();
+            _phone.focus();
+        }else{
+            settime(obj);
+        }
+    
+        function settime(obj) {
+            if(_countdown == 0) {
+                obj.removeAttribute("disabled");
+                obj.style.backgroundColor="#bf2640"
+                obj.value = "免费获取验证码";
+                _countdown = 60;
+                return;
+            } else {
+                obj.setAttribute("disabled", true);
+                obj.style.backgroundColor="#c3c3c3"
+                obj.value = "重新发送(" + _countdown + ")";
+                _countdown--;
+            }
+            setTimeout(function() {
+                settime(obj)
+            }, 1000)
+        }
+    }
+
+    function showMsgBox(Obj) {
+        $("#" + Obj).show();
+        var tkTop = parseInt(($(window).height()-525) / 2);
+        if(tkTop <= 0){
+            tkTop = 0;
+        }
+        $(".clause_pop").css("marginTop",tkTop);
+    }
+    //关闭窗口
+    function closeWindow(Obj) {
+        $("#" + Obj).hide();
+    }
+    </script>
+</body>
+</html>

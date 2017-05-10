@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="renderer" content="webkit" />
+<title>会员登录</title>
+<link href="css/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="top_box">
+        <div class="index_box">
+            <h1><a href="index.html">智慧商图</a></h1>
+        </div>
+    </div>
+    <div class="nav_box"></div>
+    <div class="login_bg">
+        <div class="index_box">
+            <div class="login_box">
+                <div class="title">登录</div>
+                <form id="signupForm" method="post" action="">
+                    <ul>
+                        <li>
+                            <p class="nr_con"><span class="wz">用户名</span><input type="text" class="input_1" id="username" maxlength="30" name="username" placeholder="输入用户名或手机号"></p>
+                        </li>
+                        <li>
+                            <p class="nr_con"><span class="wz">密 码</span><input type="password" class="input_1" id="password" name="password" placeholder="注意区分字母大小写"></p>
+                        </li>
+                        <li class="cz"><button class="submit_btn">登 录</button></li>
+                        <li><label class="label_password"><input type="checkbox" checked="checked">记住密码</label></li>
+                        <li class="cz_1"><a href="password_1.html">忘记密码></a><span class="right">还没有账号？<a href="register.html">点击注册></a></span></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="index_box footer_1">
+        <p class="wz_1">www.zhihuishangtu.com</p>
+        <p class="wz_2">客服电话：0471-6666666</p>
+        <p class="wz_3"><a href="">关于我们</a><span class="fg">|</span><a href="">联系我们</a><span class="fg">|</span><a href="">在线帮助</a><span class="fg">|</span><a href="">友情链接</a><span class="fg">|</span><a href="">广告导航</a></p>
+        <p class="wz_4">版权声明：所有图片均受著作权保护，未经许可不得使用、转载、摘编。 版权所有 北京全景视觉网络科技股份有限公司 京ICP备10011865号-1  京公网安备11010502022735号</p>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/validate-methods.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $("#signupForm").validate({
+            onfocusout: function(element) {
+                $(element).valid();
+            },
+            errorPlacement: function(error, element) { //错误信息位置设置方法
+                error.appendTo(element.parents("li")); //这里的element是录入数据的对象
+            },
+            submitHandler: function(form){   //表单提交句柄,为一回调函数，带一个参数：form   
+                // form.submit();   //提交表单
+                window.location.href="index.html";
+            }, 
+            rules: {
+                username: {
+                    required: true,
+                    minlength: 1
+                },
+                password: {
+                    required: true
+                }
+            },
+            messages: {
+                username: {
+                    required: "请输入用户名",
+                    minlength: "请至少输入2个字符"
+                },
+                password: {
+                    required: "请输入密码"
+                }
+            }
+        })
+    })
+    </script>
+</body>
+</html>
